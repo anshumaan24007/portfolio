@@ -1,0 +1,211 @@
+@import 'next-cloudinary/dist/cld-video-player.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: theme(colors.border);
+  }
+
+  *::selection {
+    background-color: theme(colors.muted.foreground);
+    color: theme(colors.background);
+  }
+
+  body {
+    background-color: theme(colors.background);
+    color: theme(colors.foreground);
+  }
+}
+
+@layer base {
+  /* Firefox */
+  * {
+    scrollbar-color: theme(colors.secondary.foreground)
+      theme(colors.secondary.DEFAULT);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: theme(width[1.5]);
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: theme(colors.secondary.DEFAULT);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: theme(colors.secondary.foreground);
+    border-radius: theme(borderRadius.full);
+
+    &:hover {
+      background-color: theme(colors.secondary.DEFAULT);
+    }
+  }
+}
+
+.hanger {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.hanger p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 5em;
+  padding-left: clamp(1.5em, 4vw, 2.5em);
+  line-height: 150%;
+  margin: 0px;
+}
+.hanger svg {
+  width: auto;
+  height: 6em;
+}
+.hanger .digital-ball {
+  z-index: 500;
+  position: absolute;
+  right: 0.9em;
+  left: auto;
+  top: 0.9em;
+  width: 4.2em;
+  height: 4.2em;
+  transform: translate(0%, 0%);
+  /* background: transparent; */
+}
+.hanger .digital-ball .globe {
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 0.8em;
+}
+.globe {
+  /* background-color: rgba(255, 0, 0, 0.1);  */
+}
+
+.globe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5em;
+  height: 5em;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.globe .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: inset 0.1em 0px 0px 0.08em #ffffff; */
+  font-size: 0.75em;
+  border-radius: 50%;
+  animation: 2.7s linear 0s infinite normal none running circle1;
+}
+.globe :nth-child(1) {
+  animation-delay: -1.8s;
+}
+.globe :nth-child(2) {
+  animation-delay: -0.9s;
+}
+.globe .circle-hor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  height: 55%;
+  /* box-shadow: inset 0px 0px 0px 0.15em #ffffff; */
+  font-size: 0.75em;
+  border-radius: 50%;
+}
+.globe .circle-hor-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  height: 0.15em;
+  font-size: 0.75em;
+  border-radius: 0%;
+  /* background: #ffffff; */
+}
+.globe-wrap {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%) rotate(30deg);
+  /* box-shadow: inset 0px 0px 0px 0.125em #ffffff; */
+  border-radius: 50%;
+  animation: 5.4s cubic-bezier(0.35, 0, 0.65, 1) 0s infinite normal none running
+    globe;
+  overflow: hidden;
+}
+.digital-ball .overlay {
+  /* opacity: 0; */
+  /* transition: opacity 1s ease-in-out; */
+  /* animation: 6s ease-in-out 0s infinite normal none running digitalball; */
+}
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.digital-ball {
+  position: relative;
+  /* width: 300px;
+  height: 300px; */
+  margin: 0 auto;
+}
+
+.globe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.globe-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle,
+.circle-hor,
+.circle-hor-middle {
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.circle-hor {
+  transform: rotate(90deg);
+}
+
+.circle-hor-middle {
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+  border: 1px solid rgb(255, 255, 255);
+}
