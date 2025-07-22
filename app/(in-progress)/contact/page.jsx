@@ -16,7 +16,7 @@ export default function Contact() {
     <Transition pageName={"contact"}>
       <Navbar />
       <InProgress>Collab? Coffee? Chaos?</InProgress>
-      <main className="contact-page mx-auto space-y-24 bg-gradient-to-t from-[#e9eaeb] to-[#FFFFFF] px-4 pb-64 pt-16 text-gray-800">
+      <main className="contact-page mx-auto space-y-24 bg-gradient-to-t from-[#e9eaeb] to-[#FFFFFF] px-4 pb-32 pt-16 text-gray-800">
         {/* Hero */}
         <section className="mx-64 flex justify-between space-y-4">
           <h1 className="text-4xl font-thin leading-tight md:text-7xl">
@@ -34,7 +34,11 @@ export default function Contact() {
         {/* Contact Form or Details can be added here */}
         <section className="mx-72 flex gap-40 pt-16 md:grid-cols-2">
           {/* Left: Contact Form */}
-          <form className="space-y-10 w-full text-black">
+          <form
+            action="https://formspree.io/f/xwpqllbd"
+            method="POST"
+            className="space-y-10 w-full text-black"
+          >
             {[
               {
                 id: "name",
@@ -73,6 +77,7 @@ export default function Contact() {
                 <input
                   type="text"
                   id={field.id}
+                  name={field.id}
                   placeholder={field.placeholder}
                   className="mt-2 w-full bg-transparent text-gray-400 placeholder-gray-600 focus:outline-none"
                 />
@@ -82,14 +87,13 @@ export default function Contact() {
             <br />
             <br />
             <br />
-            <Link href="/contact" passHref>
-              <MagneticButton
-                variant="ghost"
-                className="px-10 py-12 md:px-20 md:py-24"
-              >
-                Ping me!
-              </MagneticButton>
-            </Link>
+            <MagneticButton
+              type="submit"
+              variant="ghost"
+              className="px-10 py-12 md:px-20 md:py-24"
+            >
+              Ping me!
+            </MagneticButton>
           </form>
 
           {/* Right: Contact Details */}

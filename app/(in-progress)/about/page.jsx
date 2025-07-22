@@ -64,7 +64,7 @@ export default function About() {
           </div>
         </section>
 
-        <div className="flex-col px-4">
+        <div className="flex-col px-4 mx-64">
           <div className="relative flex gap-8 mx-auto w-full max-w-screen-lg">
             <p className="text-lg text-gray-500 w-full">
               Front-End Engineer with 4+ years of experience crafting

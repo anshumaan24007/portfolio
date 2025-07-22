@@ -1,4 +1,4 @@
-@import 'next-cloudinary/dist/cld-video-player.css';
+@import "next-cloudinary/dist/cld-video-player.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,19 +103,22 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   /* box-shadow: inset 0.1em 0px 0px 0.08em #ffffff; */
-  font-size: 0.75em;
-  border-radius: 50%;
-  animation: 2.7s linear 0s infinite normal none running circle1;
+  /* font-size: 0.75em; */
+  /* border-radius: 50%; */
+  /* animation: 2.7s linear 0s infinite normal none running circle1; */
 }
 .globe :nth-child(1) {
-  animation-delay: -1.8s;
+  /* animation-delay: -1.8s; */
 }
 .globe :nth-child(2) {
-  animation-delay: -0.9s;
+  /* animation-delay: -0.9s; */
 }
-.globe .circle-hor {
+.globe .circle-hor,
+.globe .circle-1,
+.globe .circle-2,
+.globe .circle-3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -181,9 +184,23 @@
 }
 
 .globe-wrap {
-  position: relative;
+  /* position: relative;
+  width: 100%;
+  height: 100%; */
+
+  border: 2px solid rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  animation: globe 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+  overflow: hidden;
+  /* box-shadow: inset 0px 0px 0px 0.125em var(--color-white); */
+  transform: translate(-50%, -50%) rotate(-14deg);
+  transform-origin: center center;
 }
 
 .circle,
@@ -197,15 +214,22 @@
   top: 0;
   left: 0;
 }
+.circle-1,
+.circle-2,
+.circle-3 {
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%) rotate(90deg) !important;
+}
 
 .circle-hor {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 
 .circle-hor-middle {
-  width: 60%;
-  height: 60%;
-  top: 20%;
-  left: 20%;
+  width: 100%;
+  height: 100%;
+  /* top: 20%;
+  left: 20%; */
   border: 1px solid rgb(255, 255, 255);
 }
