@@ -1,38 +1,38 @@
 export const projectOptions = {
   first: [
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/rpmf9egswyd8563mxe9t',
+      type: "image",
+      source: "",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/fldn3dntkusr22roeybr',
+      type: "video",
+      source: "",
     },
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/k7bp2wbfmalpjfk3yk5q',
+      type: "image",
+      source: "",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/x8w8sbohl5wkfuelmkhu',
+      type: "video",
+      source: "",
     },
   ],
   second: [
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/r4kcbkvkl0djjt0mxmcw',
+      type: "image",
+      source: "",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/q0yepc6dssbosmdk3isu',
+      type: "video",
+      source: "",
     },
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/ffoc9zsoeusptc7jcid5',
+      type: "image",
+      source: "",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/usiswniv5qhgu2vamhnx',
+      type: "video",
+      source: "",
     },
   ],
 };
